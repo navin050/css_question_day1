@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .internal{
+          color: maroon;
+          margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS INTERVIEW Q&A (DAY1)</h1>
+    <h3>1. Difference between flex-direction as row and column.</h3>
+    <p>This is a CSS property based on the concept of the flexbox. Flex-direction property can be applied to the parent elements and then the child elements of this parent tag will be placed accordingly. 
+    </p>
+    <p>The difference is when we apply flex-direction : row, child elements will be placed one after another in the same row (horizontally) and then the row or x-axis will be considered as the main axis, in this case the y-axis will be known as cross axis.
+    </p>
+    <p>output:-</p>
+    <div class="container1">
+        <div class="flex-items1"></div>
+        <div class="flex-items1"></div>
+        <div class="flex-items1"></div>
+    </div>
+    <p>On the other hand if we apply flex-direction : column places the child elements in column(vertically) means every child element will be placed one after another in the same column, and then the y-axis will be considered as the main axis and x-axis will be known as cross axis.
+    </p>
+    <p>output:-</p>
+    <div class="container2">
+        <div class="flex-items2"></div>
+        <div class="flex-items2"></div>
+        <div class="flex-items2"></div>
+    </div>
+    <hr>
+    <h3>2. Explain the Inline, Internal, and External Stylesheet.
+    </h3>
+    <p>In CSS, we have 3 different ways of writing styles for HTML elements:
+        <ul>
+            <li>Inline</li>
+            <li>Internal</li>
+            <li>External</li>
+        </ul>
+    </p>
+    <p>Inline styling gets applied directly to the element in the style attribute. This styling is having the highest priority among all. But it is not advised to use this styling much in projects.
+    </p>
+    <p>output:-</p>
+    <h1 style="color: red; text-align:center;">Heading One</h1>
+    <p style="color: blue;">This is a paragraph</p>
+    <p>Internal styling gets written in the head tag of the HTML file. It will be written in the style tag. The styling written in style tag will be applicable only in that HTML file.
+    </p>
+    <p>output:-</p>
+    <h1 class="internal">First Heading</h1>
+    <p class="internal">This is a paragraph</p>
+    <p>External Styling is done by creating a different CSS file with .css extension. This file can be linked to any HTML file wherever the styling is required. The external CSS file can be attached to the HTML file in the head tag in the link tag. This styling is having the least priority but it is the most advised way of writing styling in projects.
+    </p>
+    <p>output:-</p>
+    <h1 class="external">This is a heading</h1>
+    <p class="external">This is a paragraph.</p>
+    <hr>
+    <h3>3. What does justify-content allow you to do?
+    </h3>
+    <p>The justify-content property is a sub-property of the Flex-box Module.
+    </p>
+    <p>The justify-content property specifies how flex-items are distributed along the main axis of their parent flex-container. If the flex-direction of the parent container is row(default value) then the main axis will be the x-axis. If the flex-direction is a column then the main axis will be the y-axis. This property has 6 different possible values:
+        <ul>
+            <li>flex-start (default)</li>
+            <li>flex-end</li>
+            <li>center</li>
+            <li>space-around</li>
+            <li>space-between</li>
+            <li>space-evenly</li>
+            <li>stretch</li>
+        </ul>
+    </p>
+    <p>output:-</p>
+    <div class="parent1">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+    <div class="parent2">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+    <div class="parent3">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+    <div class="parent4">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+    <div class="parent5">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+    <div class="parent6">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+    <div class="parent7">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+    <hr>
+    <h3>4. Difference between Absolute and Relative Positioning?
+    </h3>
+    <p>
+        position: relative
+        <ul>
+            <li>
+                It is used when we need to position the HTML element relative to its normal position.
+            </li>
+            <li>
+                We can set top, right, bottom and left properties that will cause the element to adjust away from the normal position.
+            </li>
+        </ul>
+
+    </p>
+    <p>output:-</p>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+    <p>
+        position: absolute
+        <ul>
+            <li>
+                An element with position absolute will move according to the position of its parent element.
+            </li>
+            <li>
+                In the absence of the parent element, the HTML element will be placed according to the body tag. In this case if you want to place the element at any position based on the parent element then we need to give the position : relative to parent element and then position : absolute to child element. 
+
+            </li>
+        </ul>
+
+    </p>
+    <p>output:-</p>
+    <div>
+        <div class="box1" id="box5"></div>
+        <div class="box1" id="box6"></div>
+        <div class="box1" id="box7"></div>
+        <div class="box1" id="box8"></div>
+    </div>
+    <hr>
+    <h3>5. What are grid-template-columns used for?
+    </h3>
+    <p>Grid-template-columns property defines how many columns should be there in a grid-container. The number of columns is determined by the number of values defined in the space-separated list. It takes values in px, % and fraction (fr).
+    </p>
+    <p>output:-</p>
+    <div class="container3">
+        <div class="item">This is (300px)</div>
+        <div class="item">This is (100px)</div>
+        <div class="item">This is (100px)</div>
+        <div class="item">This is (300px)</div>
+        <div class="item">This is (100px)</div>
+        <div class="item">This is (100px)</div>
+    </div>
+    <div class="container4">
+        <div class="item1">This is (300px)</div>
+        <div class="item1">This is (auto)</div>
+        <div class="item1">This is (100px)</div>
+        <div class="item1">This is (300px)</div>
+        <div class="item1">This is (auto)</div>
+        <div class="item1">This is (100px)</div>
+    </div>
+    <div class="container5">
+        <div class="item">This is (1fr)</div>
+        <div class="item">This is (3fr)</div>
+        <div class="item">This is (1fr)</div>
+        <div class="item">This is (1fr)</div>
+        <div class="item">This is (3fr)</div>
+        <div class="item">This is (1fr)</div>
+    </div>
+    <div class="container6">
+        <div class="item1">This is (300px)</div>
+        <div class="item1">This is (auto)</div>
+        <div class="item1">This is (100px)</div>
+        <div class="item1">This is (300px)</div>
+        <div class="item1">This is (auto)</div>
+        <div class="item1">This is (100px)</div>
+    </div>
+    <hr>
+    <h3>6. What is z-index in CSS?</h3>
+    <p>The z-index property determines the stack level of an HTML element. The “stack level” refers to the element's position on the Z axis (as opposed to the X axis or Y axis). Elements with a higher index will be placed on top of elements with a lower index. If the z-index value of any element is positive then that element will be at the top and element having negative value of z-index will be at the bottom.</p>
+    <p>Note :-  z-index will only work on an element whose position property has been set to absolute, relative and fixed.</p>
+    
+    <p>output:-</p>
+    <div id="boxA"></div>
+    <div id="boxB"></div>
+    <br><br><br>
+    <hr>
+    <h3>7. What is the difference between Padding and Margin.</h3>
+    <p>These two properties are CSS properties that provide space or gap. Both margin and padding targets the four sides of an element. </p>
+    <table>
+        <tr>
+            <th>Margin</th>
+            <th>Padding</th>
+        </tr>
+        <tr>
+            <td>Margin provides the space between the border and nearby elements. It is the space outside the border.
+            </td>
+            <td>Padding provides the space between the border and the content of an element. It is the space inside the border
+            </td>
+        </tr>
+        <tr>
+            <td>You can set margin values to be negative if you want elements to overlap.</td>
+            <td>Padding values can only be positive.</td>
+        </tr>
+        <tr>
+            <td>When you set margin values, the element's size does not change, only the space around it.</td>
+            <td>When you set padding values, the size of that element increases.</td>
+        </tr>
+    </table>
+    <p>Illustration:- </p>
+    <div class="margin">
+        <div class="padding">Padding is the space between box border and the content inside it.</div>
+    </div>
+
+</body>
+</html>
